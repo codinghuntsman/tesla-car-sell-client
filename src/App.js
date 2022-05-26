@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Blogs from './Components/Blogs/Blogs';
 import Portfolio from './Components/Portfolio/Portfolio';
+import Review from './Components/Review/Review';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='portfolio' element={<Portfolio />}></Route>
+        <Route path='/review' element={<Review />}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
