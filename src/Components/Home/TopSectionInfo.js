@@ -18,7 +18,7 @@ const TopSectionInfo = ({ product }) => {
                     <p className='text-black text-sm lg:text-base'><span className='text-black font-bold'>available:</span> {available}</p>
                 </div>
                 <div className="card-actions justify-center mt-3">
-                    <button className="btn btn-wide bg-gradient-to-r from-accent to-red-500 border-0 btn-xs sm:btn-sm md:btn-md font-sans font-bold"><Link className='text-white' to="/purchase">Determine</Link> </button>
+                    <button className="btn btn-wide bg-gradient-to-r from-accent to-red-500 border-0 btn-xs sm:btn-sm md:btn-md font-sans font-bold"><Link className='text-white' to='/purchase'>Determine</Link> </button>
                 </div>
             </div>
         </div>

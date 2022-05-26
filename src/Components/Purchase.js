@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 
 const Purchase = () => {
 
+    const { id } = useParams();
+    const [users, setUsers] = useState({});
+    console.log(users);
+    useEffect(() => {
+        const url = `http://localhost:5000/products/${id}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setUsers(data))
+    }, []);
+
+    //-------------Post method from here------------------
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
@@ -17,7 +28,6 @@ const Purchase = () => {
         const quantity = event.target.quantity.value;
         const account = event.target.account.value;
 
-
         const purchaseInfo = {
             name: user.displayName,
             email: user.email,
@@ -26,7 +36,7 @@ const Purchase = () => {
             phone: phone,
             quantity: quantity,
             bankAccount: account,
-        }
+        };
 
         //-----------Post method or create method-----------------
         fetch('http://localhost:5000/purchase', {
@@ -43,7 +53,7 @@ const Purchase = () => {
                 }
                 navigate("/");
             });
-    }
+    };
     return (
         <div>
             <h2 className=' text-center text-pink-500 text-sm md:text-md lg:text-xl font-extrabold font-sans'>PLEASE FILL OUT FORM THEN PLACE YOUR ORDER</h2>
@@ -57,6 +67,7 @@ const Purchase = () => {
                 <input type="text" name="account" placeholder="Your bank account number" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                 <input type="submit" value="PLACE ORDER" className="btn btn-accent text-white font-bold w-full max-w-xs" />
             </form>
+            <img src={users.img} alt="" />
         </div>
     );
 };
