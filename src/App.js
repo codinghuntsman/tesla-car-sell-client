@@ -11,6 +11,7 @@ import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Footer from './Components/Footer/Footer';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Blogs from './Components/Blogs/Blogs';
+import Portfolio from './Components/Portfolio/Portfolio';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         }></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='portfolio' element={<Portfolio />}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
