@@ -13,6 +13,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Blogs from './Components/Blogs/Blogs';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Review from './Components/Review/Review';
+import Notfound from './Components/Notfound/Notfound';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='portfolio' element={<Portfolio />}></Route>
         <Route path='/review' element={<Review />}></Route>
+        <Route path='*' element={<Notfound />}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
