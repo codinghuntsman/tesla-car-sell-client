@@ -2,12 +2,9 @@
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
         "name": "SUPER POWER ENGINE",
-        "supplier": "zuliana behenmina",
         "description": "Part of patreon's learn Engineering series of videos, this ten-minute powertrain primer is very accessible but surprisingly informative.",
-        "price": 420,
         "engine": 6100,
         "available": 5120,
-        "stock": 20,
         "ratings": 5,
         "img": "https://i.ibb.co/cgBfWDy/tesla-five-by-three.png",
         "quantity": 7510
@@ -15,12 +12,9 @@
     {
         "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
         "name": "POWERFUL MECHANISM",
-        "supplier": "suzana hamnenia",
         "description": "It uses language simple enough for anyone to understand, but goes into considerable detail about the workings of an electric drivetrain.",
-        "price": 196,
         "engine": 6100,
         "available": 5120,
-        "stock": 19,
         "ratings": 5,
         "img": "https://i.ibb.co/9rnpvTj/tesla-five-by-three-1.png",
         "quantity": 6520
@@ -28,9 +22,7 @@
     {
         "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
         "name": "EXTRAORDINARY STRUCTURE",
-        "supplier": "devid korenta",
         "description": "how it differs from its internal-combustion counterpart. If you struggle to explain the advantages of going electric to your car guy friends, this would be a handy vid to share with them.",
-        "price": 245,
         "engine": 6000,
         "available": 5120,
         "stock": 20,
@@ -41,12 +33,9 @@
     {
         "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
         "name": "META POWER V81F SUNER",
-        "supplier": "Hamim folbeder",
         "description": "Part of Patreon's Learn Engineering series of videos, this ten-minute powertrain primer is very accessible but surprisingly informative.",
-        "price": 229,
         "engine": 6100,
         "available": 5120,
-        "stock": 10,
         "ratings": 5,
         "img": "https://i.ibb.co/DGZX6Zy/engine-6.png",
         "quantity": 9100
@@ -54,12 +43,9 @@
     {
         "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
         "name": "ULTRA DIGITAL SUNER V8ET",
-        "supplier": "kareana kortecis",
         "description": "how it differs from its internal-combustion counterpart. If you struggle to explain the advantages of going electric to your car guy friends, this would be a handy vid to share with them.",
-        "price": 287,
         "engine": 6100,
         "available": 5120,
-        "stock": 11,
         "ratings": 4,
         "img": "https://i.ibb.co/rc8RV1C/engine-8.png",
         "quantity": 5620
@@ -67,48 +53,36 @@
     {
         "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
         "name": "MEGA POWER SUNER V8HE",
-        "supplier": "mohamina jamil",
         "description": "Part of Patreon's Learn Engineering series of videos, this ten-minute powertrain primer is very accessible but surprisingly informative.",
-        "price": 150,
         "engine": 6100,
         "available": 5120,
-        "stock": 19,
         "img": "https://i.ibb.co/fxCJNdd/engine-9.png",
         "quantity": 4520
     },
     {
         "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
         "name": "SUNER 23V8 SUNER V8ER",
-        "supplier": "mohamina jamil",
         "description": "It uses language simple enough for anyone to understand, but goes into considerable detail about the workings of an electric drivetrain.",
-        "price": 150,
         "engine": 6100,
         "available": 5120,
-        "stock": 19,
         "img": "https://i.ibb.co/9WWpDWk/engine-10.png",
         "quantity": 8562
     },
     {
         "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
         "name": "MICRO CONTROLLER SYSTEM",
-        "supplier": "mohamina jamil",
         "description": "Part of Patreon's Learn Engineering series of videos, this ten-minute powertrain primer is very accessible but surprisingly informative.",
-        "price": 150,
         "engine": 6100,
         "available": 5120,
-        "stock": 19,
         "img": "https://i.ibb.co/dDf8K1z/engine-1.png",
         "quantity": 4520
     },
     {
         "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
         "name": "SUPER SONIK V9E POWER",
-        "supplier": "mohamina jamil",
         "description": "how it differs from its internal-combustion counterpart. If you struggle to explain the advantages of going electric to your car guy friends, this would be a handy vid to share with them.",
-        "price": 150,
         "engine": 6100,
         "available": 5120,
-        "stock": 19,
         "img": "https://i.ibb.co/jHNB94N/engine-3.png",
         "quantity": 4521
     }

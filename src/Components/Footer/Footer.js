@@ -64,7 +64,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <footer class="footer footer-center border-t p-4">
+            <footer className="footer footer-center border-t p-4">
                 <div className='sm:flex-col lg:flex lg:justify-center lg:items-center lg:flex-row font-medium'>
                     <p><FcOk /></p>
                     <p>Copyright &copy; All right reserved by Tesla manufacturing Ltd</p>

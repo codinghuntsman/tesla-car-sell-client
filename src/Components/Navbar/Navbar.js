@@ -5,7 +5,6 @@ import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import logo from '../../assets/images/logo.png';
-import { FcApproval } from "react-icons/fc";
 
 const Navbar = () => {
 
@@ -21,7 +20,7 @@ const Navbar = () => {
         <li><Link to="/appointment">Appointment</Link></li>
         <li><Link to="/review">Review</Link></li>
         <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="/blogs">Blogs</Link></li>
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
