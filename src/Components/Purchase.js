@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 
@@ -56,8 +56,8 @@ const Purchase = () => {
             });
     };
     return (
-        <div className='container grid grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-2 gap-4 mt-5'>
-            <div class="card bg-base-100 shadow-xl">
+        <div className='container grid grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-2 gap-4 mt-3'>
+            <div class="card bg-base-100 shadow-xl py-3">
                 <figure>
                     <img className='rounded-md' src={users.img} alt="Album" />
                 </figure>
@@ -66,17 +66,20 @@ const Purchase = () => {
                     <p className='font-sans text-black'><span className='text-black font-bold font-sans'>quantity:</span> {users.quantity}</p>
                     <p className='font-sans text-black'><span className='text-black font-bold font-sans'>available:</span> {users.available}</p>
                     <p className='font-sans text-black'><span className='text-black font-bold font-sans'>engine:</span> <span className='font-bold text-orange-500'>$</span> {users.engine}</p>
+                    <div className='flex justify-end container'>
+                        <button class="btn btn-outline btn-xs sm:btn-sm md:btn-md btn-accent text-black"><Link to="/">HOME</Link></button>
+                    </div>
                 </div>
             </div>
-            <div className="card bg-base-100 shadow-xl">
-                <h2 className='text-center text-pink-500 text-sm md:text-md lg:text-xl font-extrabold font-sans'>PLEASE FILL OUT FORM AND PLACE THE ORDER</h2>
-                <form onSubmit={handlePurchase} className='grid grid-cols-1 gap-2 justify-items-center'>
+            <div className="card bg-base-100 shadow-xl py-3">
+                <h2 className='text-center text-pink-500 text-xs md:text-md lg:text-xl font-extrabold font-sans'>PLEASE FILL OUT FORM AND PLACE THE ORDER</h2>
+                <form onSubmit={handlePurchase} className='grid grid-cols-1 gap-2 justify-items-center mt-2'>
                     <input type="text" name="name" disabled value={user?.displayName} className="input input-bordered input-accent w-full max-w-xs font-bold" />
                     <input type="text" name="email" disabled value={user?.email} className="input input-bordered input-accent w-full max-w-xs font-bold" />
                     <input type="text" name="country" placeholder="Your country" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                     <input type="text" name="location" placeholder="Current location" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                     <input type="text" name="number" placeholder="Phone number" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
-                    <input type="number" name="quantity" placeholder="Quantity minimum 10" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
+                    <input type="number" name="quantity" placeholder="Minimum order quantity 10" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                     <input type="text" name="account" placeholder="Your bank account number" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                     <input type="submit" value="PLACE ORDER" className="btn btn-accent text-white font-bold w-full max-w-xs" />
                 </form>
