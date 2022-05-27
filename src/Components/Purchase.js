@@ -57,7 +57,6 @@ const Purchase = () => {
                 <input type="text" name="account" placeholder="Your bank account number" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                 <input type="submit" value="PLACE ORDER" className="btn btn-accent text-white font-bold w-full max-w-xs" />
             </form>
-            <img src={users.img} alt="" />
         </div>
     );
 };
