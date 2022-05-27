@@ -30,9 +30,9 @@ const Register = () => {
 
     //--------------Handle form submit-------------------
     const onSubmit = async data => {
-        await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name });
-        navigate("/home");
+        await createUserWithEmailAndPassword(data.email, data.password)
+        navigate("/");
     };
     return (
         <div className='flex justify-center items-center mt-1 lg:mt-5 mb-2'>
