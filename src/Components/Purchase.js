@@ -6,17 +6,7 @@ import auth from '../firebase.init';
 
 const Purchase = () => {
 
-    const { id } = useParams();
-    const [users, setUsers] = useState({});
-    console.log(users);
-    useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setUsers(data))
-    }, []);
-
-    //-------------Post method from here------------------
+       //-------------Post method from here------------------
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
