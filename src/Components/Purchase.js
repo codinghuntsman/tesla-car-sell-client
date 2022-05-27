@@ -7,6 +7,8 @@ import auth from '../firebase.init';
 const Purchase = () => {
 
     //-------------Post method from here------------------
+    //-------------Post method from here------------------
+    //-------------Post method from here------------------
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
