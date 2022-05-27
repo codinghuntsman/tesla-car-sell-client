@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 
 const Purchase = () => {
 
-       //-------------Post method from here------------------
+    //-------------Post method from here------------------
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
