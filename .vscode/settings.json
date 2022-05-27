@@ -2,5 +2,13 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
     
-    }
+    },
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.editor.wrapTabs": false,
+    "workbench.editor.scrollToSwitchTabs": false,
+    "workbench.editor.sharedViewState": false,
+    "workbench.editor.revealIfOpen": false,
+    "workbench.editor.languageDetectionHints": {},
+    "workbench.editor.defaultBinaryEditor": "default",
+    "workbench.editor.autoLockGroups": {}
 }
