@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import logo from '../../assets/images/logo.png';
+import { FcOk } from "react-icons/fc";
 
 const Navbar = () => {
 
@@ -22,6 +23,9 @@ const Navbar = () => {
         <li><Link to="/blogs">Blogs</Link></li>
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
+        {
+            user && <p className='text-sm text-pink-600 font-extrabold w-36 h-auto flex justify-center items-center hover:text-white'><span><FcOk /></span> {user.displayName}</p>
         }
 
         {/* --------------------------Logout toggle method------------------------------ */}
