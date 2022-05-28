@@ -22,6 +22,7 @@ const Portfolio = () => {
                         <li className='font-bold text-sm lg:text-lg'>CSS (Cascading Style Sheets)</li>
                         <li className='font-bold text-sm lg:text-lg'>Bootstrap</li>
                         <li className='font-bold text-sm lg:text-lg'>Tailwind</li>
+                        <li className='font-bold text-sm lg:text-lg'>Daisy Ui (Tailwind css component)</li>
                         <li className='font-bold text-sm lg:text-lg'>React Bootstrap</li>
                         <li className='font-bold text-sm lg:text-lg'>Java Script</li>
                         <li className='font-bold text-sm lg:text-lg'>React</li>

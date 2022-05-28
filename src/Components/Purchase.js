@@ -72,7 +72,7 @@ const Purchase = () => {
                 </div>
             </div>
             <div className="card bg-base-100 shadow-xl py-3">
-                <h2 className='text-center text-pink-500 text-xs md:text-md lg:text-xl font-extrabold font-sans'>PLEASE FILL OUT FORM AND PLACE THE ORDER</h2>
+                <h2 className='text-center text-pink-500 text-xs md:text-md lg:text-xl font-extrabold font-sans'>PLEASE FILL OUT THE FORM AND PLACE THE ORDER</h2>
                 <form onSubmit={handlePurchase} className='grid grid-cols-1 gap-2 justify-items-center mt-2'>
                     <input type="text" name="name" disabled value={user?.displayName} className="input input-bordered input-accent w-full max-w-xs font-bold" />
                     <input type="text" name="email" disabled value={user?.email} className="input input-bordered input-accent w-full max-w-xs font-bold" />
