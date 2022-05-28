@@ -8,7 +8,7 @@ const MyOrder = () => {
     const [user] = useAuthState(auth);
     const [myOrders, setMyOrders] = useState([]);
 
-    // এখান থেকে ইউজার এর ইমেইল নিয়ে বুকিং এ পি আই এর মাধ্যমে সার্ভারে পাঠিয়েছি।
+    // এখান থেকে ডায়নামিকভাবে ইউজার এর ইমেইল নিয়ে বুকিং এ পি আই এর মাধ্যমে সার্ভারে পাঠিয়েছি।
     // একক ইউসারের একক বুকিং পাওয়ার জন্য।
     useEffect(() => {
         if (user) {
@@ -17,6 +17,25 @@ const MyOrder = () => {
                 .then(data => setMyOrders(data))
         }
     }, [user]);
+
+
+    //-----------Delete a users order from database----------
+    const handleDelete = (id) => {
+        const proceed = window.confirm("Are you sure you want to delete?")
+        if (proceed) {
+            const url = `http://localhost:5000/order/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        const remaining = myOrders.filter(order => order._id !== id);
+                        setMyOrders(remaining)
+                    }
+                });
+        };
+    };
 
 
     return (
@@ -46,7 +65,7 @@ const MyOrder = () => {
                             <td>{order.location}</td>
                             <td>{order.phone}</td>
                             <td>
-                                <button className="btn btn-xs text-pink-500"><Link className='hover:text-red-600' to="cancel">Cancel Order</Link></button>
+                                <button onClick={() => handleDelete(order._id)} key={order._id} className="btn btn-xs text-pink-500"><Link className='hover:text-red-600' to="">Cancel Order</Link></button>
                             </td>
                         </tr>)
                     }

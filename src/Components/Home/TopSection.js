@@ -6,6 +6,7 @@ const TopSection = () => {
 
     const [products, setProducts] = UseProduct();
     const newProducts = products.slice(0, 3);
+
     return (
         <div>
             <p className=' container text-xs md:text-xl lg:text-4xl text-center text-accent mt-24 font-extrabold font-serif bg-clip-text'>YOU CAN PURCHASE YOUR FAVORITE VEHICLES</p>
@@ -17,7 +18,6 @@ const TopSection = () => {
                 <TopSectionInfo src="https://i.ibb.co/B2j3g5Y/tesla-five-by-three-2.png" name="EXTRAORDINARY STRUCTURE" description="You can open your serial any time" quantity="1400" available="900" engine="60000"></TopSectionInfo> */}
 
 
-                {/*----------------Dynamic---------------- */}
                 {/*----------------Dynamic---------------- */}
                 {
                     newProducts.map(product => <TopSectionInfo key={product._id} product={product} ></TopSectionInfo>)
