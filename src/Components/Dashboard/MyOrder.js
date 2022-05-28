@@ -40,7 +40,7 @@ const MyOrder = () => {
 
     return (
         <div className='overflow-x-auto'>
-            <p className='pl-10'>Total Booking:{myOrders.length}</p>
+            <p className='pl-10'>Total Booking: {myOrders.length}</p>
             <table className="table table-compact w-full">
                 <thead>
                     <tr>

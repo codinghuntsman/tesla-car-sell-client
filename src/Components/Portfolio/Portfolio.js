@@ -26,6 +26,7 @@ const Portfolio = () => {
                         <li className='font-bold text-sm lg:text-lg'>React Bootstrap</li>
                         <li className='font-bold text-sm lg:text-lg'>Java Script</li>
                         <li className='font-bold text-sm lg:text-lg'>React</li>
+                        <li className='font-bold text-sm lg:text-lg'>Node.js</li>
                         <li className='font-bold text-sm lg:text-lg'>React firebase hooks</li>
                         <li className='font-bold text-sm lg:text-lg'>React hook forms</li>
                         <li className='font-bold text-sm lg:text-lg'>React query</li>
