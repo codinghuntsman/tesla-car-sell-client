@@ -9,7 +9,6 @@ const Purchase = () => {
     //------------Get a single product from database-------------
     const { id } = useParams();
     const [users, setUsers] = useState({});
-    console.log(users.name);
 
     useEffect(() => {
         fetch(`http://localhost:5000/products/${id}`)
@@ -27,8 +26,6 @@ const Purchase = () => {
         const location = event.target.location.value;
         const phone = event.target.number.value;
         const quantity = event.target.quantity.value;
-        const account = event.target.account.value;
-
         const purchaseInfo = {
             name: user.displayName,
             email: user.email,
@@ -36,10 +33,9 @@ const Purchase = () => {
             location: location,
             phone: phone,
             quantity: quantity,
-            bankAccount: account,
         };
 
-        //-----------Post method or create method-----------------
+        //----(create order)Post method or create method-----------------
         fetch('http://localhost:5000/purchase', {
             method: 'POST',
             headers: {
@@ -57,17 +53,17 @@ const Purchase = () => {
     };
     return (
         <div className='container grid grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-2 gap-4 mt-3'>
-            <div class="card bg-base-100 shadow-xl py-3">
+            <div className="card bg-base-100 shadow-xl py-3">
                 <figure>
                     <img className='rounded-md' src={users.img} alt="Album" />
                 </figure>
-                <div class="pl-10 mt-2">
+                <div className="pl-10 mt-2">
                     <h2 className="text-accent text-sm lg:text-xl font-bold font-sans"><span>{users.name}</span></h2>
                     <p className='font-sans text-black'><span className='text-black font-bold font-sans'>quantity:</span> {users.quantity}</p>
                     <p className='font-sans text-black'><span className='text-black font-bold font-sans'>available:</span> {users.available}</p>
                     <p className='font-sans text-black'><span className='text-black font-bold font-sans'>engine:</span> <span className='font-bold text-orange-500'>$</span> {users.engine}</p>
                     <div className='flex justify-end container'>
-                        <button class="btn btn-outline btn-xs sm:btn-sm md:btn-md btn-accent text-black"><Link to="/">HOME</Link></button>
+                        <button className="btn btn-outline btn-xs sm:btn-sm md:btn-md btn-accent text-black"><Link to="/">HOME</Link></button>
                     </div>
                 </div>
             </div>
@@ -80,11 +76,9 @@ const Purchase = () => {
                     <input type="text" name="location" placeholder="Current location" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                     <input type="text" name="number" placeholder="Phone number" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                     <input type="number" name="quantity" placeholder="Minimum order quantity 10" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
-                    <input type="text" name="account" placeholder="Your bank account number" className="input input-bordered input-accent w-full max-w-xs font-bold placeholder:text-black" required />
                     <input type="submit" value="PLACE ORDER" className="btn btn-accent text-white font-bold w-full max-w-xs" />
                 </form>
             </div>
-
         </div>
     );
 };

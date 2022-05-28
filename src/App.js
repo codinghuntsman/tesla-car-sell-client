@@ -14,6 +14,8 @@ import Blogs from './Components/Blogs/Blogs';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Review from './Components/Review/Review';
 import Notfound from './Components/Notfound/Notfound';
+import MyOrder from './Components/Dashboard/MyOrder';
+import AddReview from './Components/Dashboard/AddReview';
 
 function App() {
   return (
@@ -28,7 +30,10 @@ function App() {
             <Purchase />
           </RequireAuth>
         }></Route>
-        <Route path='/dashboard' element={<Dashboard />}></Route>
+        <Route path='/dashboard' element={<Dashboard />}>
+          <Route index element={<MyOrder />}></Route>
+          <Route path='/dashboard/review' element={<AddReview />}></Route>
+        </Route>
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='portfolio' element={<Portfolio />}></Route>
         <Route path='/review' element={<Review />}></Route>
