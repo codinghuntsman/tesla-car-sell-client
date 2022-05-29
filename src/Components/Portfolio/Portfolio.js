@@ -33,6 +33,11 @@ const Portfolio = () => {
                         <li className='font-bold text-sm lg:text-lg'>Firebase</li>
                         <li className='font-bold text-sm lg:text-lg'>Mongodb</li>
                     </div>
+                    <div>
+                        <h2 className='text-md font-bold font-sans'>Web site link:</h2>
+                        <li>https://a11-authentication.web.app/</li>
+                        <li>https://tesla-manufacturing.web.app/</li>
+                    </div>
                 </div>
             </div>
         </div>
