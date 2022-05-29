@@ -11,7 +11,7 @@ const Purchase = () => {
     const [users, setUsers] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://powerful-brushlands-68038.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, []);
@@ -36,7 +36,7 @@ const Purchase = () => {
         };
 
         //----(create order)Post method or create method-----------------
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://powerful-brushlands-68038.herokuapp.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
