@@ -12,7 +12,7 @@ const MyOrder = () => {
     // একক ইউসারের একক বুকিং পাওয়ার জন্য।
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?customerEmail=${user.email}`)
+            fetch(`https://powerful-brushlands-68038.herokuapp.com/order?customerEmail=${user.email}`)
                 .then(res => res.json())
                 .then(data => setMyOrders(data))
         }
@@ -23,7 +23,7 @@ const MyOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure you want to delete?")
         if (proceed) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://powerful-brushlands-68038.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
