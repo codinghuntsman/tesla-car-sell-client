@@ -21,3 +21,4 @@ pass: 123456
  <li>You can easily buy a product and get order</li>
  <li>UI and UX very smooth</li>
  <li>You can get your information easily, how you buy a product safely</li>
+ <li>You can get your information easily, how you buy a product safely</li>
